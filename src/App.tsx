@@ -17,13 +17,15 @@ const App: React.FC = () => {
   return (
     <div>
       <h1>Lista de Tarefas</h1>
-      <input
-        type="text"
-        value={taskInput}
-        onChange={(e) => setTaskInput(e.target.value)}
-        placeholder="Digite uma tarefa..."
-      />
-      <button onClick={handleAddTask}>Adicionar Tarefa</button>
+      <div className="container-input">
+        <input
+          type="text"
+          value={taskInput}
+          onChange={(e) => setTaskInput(e.target.value)}
+          placeholder="Digite uma tarefa..."
+        />
+        <button onClick={handleAddTask}>Adicionar Tarefa</button>
+      </div>
       <TaskList />
     </div>
   );
